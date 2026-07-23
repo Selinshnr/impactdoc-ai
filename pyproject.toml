@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "impactdoc-ai"
+version = "0.1.0"
+description = "AI-powered role-based document change impact analysis platform"
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [
+    { name = "Selin Şahiner" }
+]
+dependencies = []
+
+[project.scripts]
+impactdoc = "impactdoc_ai.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
