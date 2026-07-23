@@ -1,0 +1,49 @@
+PERSONEL YÖNETİM FAALİYETLERİ
+
+Belge Kodu: IK-PR-001
+Sürüm: 1.0
+Yürürlük Tarihi: 01.07.2026
+
+1. AMAÇ
+
+Bu dokümanın amacı, kuruma yeni personel alımı, işe başlatma, izin yönetimi ve işten ayrılma faaliyetlerinin standart şekilde yürütülmesini sağlamaktır.
+
+2. KAPSAM
+
+Bu prosedür İnsan Kaynakları Birimi, birim yöneticileri ve kurum çalışanlarını kapsar.
+
+3. ROLLER VE SORUMLULUKLAR
+
+3.1 İnsan Kaynakları Uzmanı
+
+Personel özlük dosyasını oluşturur.
+İşe giriş belgelerini kontrol eder.
+İzin ve rapor kayıtlarını personel sistemine işler.
+
+3.2 Birim Yöneticisi
+
+Yeni personelin görev tanımını hazırlar.
+Personelin deneme sürecini takip eder.
+İzin taleplerini değerlendirir.
+
+3.3 Bilgi İşlem Uzmanı
+
+Yeni personel için kullanıcı hesabı açar.
+Gerekli uygulama erişimlerini tanımlar.
+
+4. İŞE GİRİŞ SÜRECİ
+
+İnsan Kaynakları Uzmanı işe giriş belgelerini teslim alır.
+Birim yöneticisi görev tanımını personele bildirir.
+Bilgi İşlem Uzmanı en geç üç iş günü içinde kullanıcı hesabını oluşturur.
+
+5. İZİN YÖNETİMİ
+
+Çalışan izin talebini e-posta yoluyla birim yöneticisine iletir.
+Birim yöneticisi talebi onayladıktan sonra İnsan Kaynakları Birimine gönderir.
+İnsan Kaynakları Uzmanı izin kaydını personel sistemine işler.
+
+6. İŞTEN AYRILMA
+
+İşten ayrılan personelin kurumsal kartı İnsan Kaynakları Birimine teslim edilir.
+Bilgi İşlem Uzmanı kullanıcı hesabını işten ayrılış tarihinden sonraki bir iş günü içinde kapatır.

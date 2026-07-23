@@ -1,0 +1,65 @@
+PERSONEL YÖNETİM FAALİYETLERİ
+
+Belge Kodu: IK-PR-001
+Sürüm: 2.0
+Yürürlük Tarihi: 15.07.2026
+
+1. AMAÇ
+
+Bu dokümanın amacı, kuruma yeni personel alımı, işe başlatma, izin yönetimi, uzaktan çalışma ve işten ayrılma faaliyetlerinin standart şekilde yürütülmesini sağlamaktır.
+
+2. KAPSAM
+
+Bu prosedür İnsan Kaynakları Birimi, birim yöneticileri, Bilgi Güvenliği Birimi, Bilgi İşlem Birimi ve kurum çalışanlarını kapsar.
+
+3. ROLLER VE SORUMLULUKLAR
+
+3.1 İnsan Kaynakları Uzmanı
+
+Personel özlük dosyasını oluşturur.
+İşe giriş belgelerini kontrol eder.
+İzin ve rapor kayıtlarını personel sistemine işler.
+Uzaktan çalışma sözleşmesini personel dosyasına ekler.
+
+3.2 Birim Yöneticisi
+
+Yeni personelin görev tanımını hazırlar.
+Personelin deneme sürecini takip eder.
+İzin ve uzaktan çalışma taleplerini değerlendirir.
+
+3.3 Bilgi İşlem Uzmanı
+
+Yeni personel için kullanıcı hesabı açar.
+Gerekli uygulama erişimlerini tanımlar.
+Çok faktörlü kimlik doğrulama kaydını tamamlar.
+
+3.4 Bilgi Güvenliği Uzmanı
+
+Kullanıcı erişim rollerini kontrol eder.
+Kritik sistem erişimleri için güvenlik onayı verir.
+
+4. İŞE GİRİŞ SÜRECİ
+
+İnsan Kaynakları Uzmanı işe giriş belgelerini teslim alır.
+Birim yöneticisi görev tanımını personele bildirir.
+Bilgi İşlem Uzmanı en geç bir iş günü içinde kullanıcı hesabını oluşturur.
+Kritik sistem erişimleri Bilgi Güvenliği Uzmanının onayından sonra tanımlanır.
+
+5. İZİN YÖNETİMİ
+
+Çalışan izin talebini personel portalı üzerinden oluşturur.
+Birim yöneticisi talebi portal üzerinden onaylar.
+İnsan Kaynakları Uzmanı onaylanan izin kaydını kontrol eder.
+
+6. UZAKTAN ÇALIŞMA
+
+Uzaktan çalışma talebi en az üç iş günü önce oluşturulur.
+Birim yöneticisi talebi iş sürekliliğini dikkate alarak değerlendirir.
+Bilgi İşlem Uzmanı personele VPN erişimi tanımlar.
+Bilgi Güvenliği Uzmanı uzaktan erişim yetkisini onaylar.
+
+7. İŞTEN AYRILMA
+
+İşten ayrılan personelin kurumsal kartı ve zimmetli cihazları İnsan Kaynakları Birimine teslim edilir.
+Bilgi İşlem Uzmanı kullanıcı hesabını işten ayrılış saatinde otomatik olarak devre dışı bırakır.
+Bilgi Güvenliği Uzmanı kritik sistemlerde açık oturum bulunmadığını doğrular.

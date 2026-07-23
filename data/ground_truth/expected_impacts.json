@@ -1,0 +1,60 @@
+{
+  "dataset_version": "1.0",
+  "document_pairs": [
+    {
+      "document_id": "personel_yonetimi",
+      "title": "Personel Yönetim Faaliyetleri",
+      "old_version": "personel_yonetim_faaliyetleri_v1.txt",
+      "new_version": "personel_yonetim_faaliyetleri_v2.txt",
+      "expected_change_types": [
+        "added",
+        "modified"
+      ],
+      "expected_changes": [
+        {
+          "section": "Kapsam",
+          "change_type": "modified",
+          "summary": "Bilgi Güvenliği Birimi kapsama eklendi."
+        },
+        {
+          "section": "Roller ve Sorumluluklar",
+          "change_type": "added",
+          "summary": "Bilgi Güvenliği Uzmanı rolü eklendi."
+        },
+        {
+          "section": "İşe Giriş Süreci",
+          "change_type": "modified",
+          "summary": "Kullanıcı hesabı açma süresi üç iş gününden bir iş gününe düşürüldü."
+        },
+        {
+          "section": "İşe Giriş Süreci",
+          "change_type": "added",
+          "summary": "Kritik sistem erişimleri için güvenlik onayı zorunlu hale getirildi."
+        },
+        {
+          "section": "İzin Yönetimi",
+          "change_type": "modified",
+          "summary": "E-posta tabanlı süreç personel portalına taşındı."
+        },
+        {
+          "section": "Uzaktan Çalışma",
+          "change_type": "added",
+          "summary": "VPN ve güvenlik onayı içeren uzaktan çalışma süreci eklendi."
+        },
+        {
+          "section": "İşten Ayrılma",
+          "change_type": "modified",
+          "summary": "Kullanıcı hesabının işten ayrılış saatinde otomatik kapatılması zorunlu hale getirildi."
+        }
+      ],
+      "expected_impacted_roles": [
+        "İnsan Kaynakları Uzmanı",
+        "Birim Yöneticisi",
+        "Bilgi İşlem Uzmanı",
+        "Bilgi Güvenliği Uzmanı",
+        "Çalışan"
+      ],
+      "expected_impact_level": "high"
+    }
+  ]
+}
