@@ -3,10 +3,12 @@
 from pathlib import Path
 
 from impactdoc_ai.models.document import Document
+from impactdoc_ai.parsing.docx_reader import read_docx
+from impactdoc_ai.parsing.pdf_reader import read_pdf
 from impactdoc_ai.parsing.txt_reader import read_txt
 
 
-SUPPORTED_EXTENSIONS = {".txt"}
+SUPPORTED_EXTENSIONS = {".txt", ".pdf", ".docx"}
 
 
 def load_document(file_path: str | Path) -> Document:
@@ -26,8 +28,16 @@ def load_document(file_path: str | Path) -> Document:
     path = Path(file_path).resolve()
     extension = path.suffix.lower()
 
-    if extension == ".txt":
-        return read_txt(path)
+    readers = {
+        ".txt": read_txt,
+        ".pdf": read_pdf,
+        ".docx": read_docx,
+    }
+
+    reader = readers.get(extension)
+
+    if reader is not None:
+        return reader(path)
 
     supported = ", ".join(sorted(SUPPORTED_EXTENSIONS))
 
