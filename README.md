@@ -36,7 +36,7 @@ ImpactDoc-AI bu süreci otomatikleştirmeyi amaçlar.
 * JSON analiz raporu üretme
 * Yönetici seviyesinde analiz özeti oluşturma
 * Komut satırı üzerinden tek komutla analiz çalıştırma
-* Otomatik regression testleri
+* Otomatik regresyon testleri
 
 ## Sistem Akışı
 
@@ -142,7 +142,7 @@ Bu yaklaşım kurumsal dokümanların dış bir API'ye gönderilmeden yerel orta
 ### 1. Projeyi klonlayın
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Selinshnr/impactdoc-ai.git
 cd impactdoc-ai
 ```
 
