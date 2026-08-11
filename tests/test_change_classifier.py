@@ -7,6 +7,7 @@ from impactdoc_ai.analysis.change_classifier import (
     classify_change_by_rules,
     clean_classification_reason,
     validate_classification_reason_semantics,
+    validate_classification_semantics,
 )
 
 
@@ -88,3 +89,26 @@ def test_removed_change_reason_cannot_reference_new_text():
     assert result.category == ChangeCategory.TASK
     assert result.confidence == 0.90
     assert "İçerik kaldırılmıştır" in result.reason
+
+
+def test_heading_only_added_change_is_other():
+    classification = ChangeClassification(
+        category=ChangeCategory.TECHNICAL,
+        confidence=0.95,
+        reason="Yeni içerik eklenmiştir.",
+        source="ollama",
+    )
+
+    result = validate_classification_semantics(
+        classification,
+        "",
+        "3.4 Bilgi Güvenliği Uzmanı",
+    )
+
+    assert result.category == ChangeCategory.OTHER
+    assert result.confidence == 0.98
+    assert result.source == "rule"
+    assert (
+        result.reason
+        == "Değişiklik yalnızca yeni bir bölüm veya rol başlığı eklemektedir."
+    )

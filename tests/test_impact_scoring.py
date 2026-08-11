@@ -232,3 +232,36 @@ def test_decision_to_dict_contains_expected_fields():
     assert "impact_reason" in data
     assert "matched_impact_keywords" in data
     assert "applied_impact_rules" in data
+
+
+def test_heading_only_added_change_can_remain_low():
+    change = make_change(
+        None,
+        "6. UZAKTAN ÇALIŞMA",
+        ChangeType.ADDED,
+    )
+
+    classification = ChangeClassification(
+        category=ChangeCategory.OTHER,
+        confidence=0.98,
+        reason=(
+            "Değişiklik yalnızca yeni bir bölüm veya "
+            "rol başlığı eklemektedir."
+        ),
+        source="rule",
+    )
+
+    decision = calculate_impact_decision(
+        change=change,
+        classification=classification,
+        affected_roles=["Doküman Yöneticisi"],
+        llm_level=ImpactLevel.LOW,
+    )
+
+    assert decision.final_level == ImpactLevel.LOW
+    assert decision.rule_level == ImpactLevel.LOW
+    assert decision.llm_level == ImpactLevel.LOW
+    assert (
+        "ekleme alt sınırı uygulanmadı"
+        in decision.reason
+    )

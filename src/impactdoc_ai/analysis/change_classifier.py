@@ -639,6 +639,7 @@ def validate_classification_semantics(
         )
     )
 
+
     if coverage_only_change:
         return ChangeClassification(
             category=ChangeCategory.DEFINITION,
@@ -647,6 +648,51 @@ def validate_classification_semantics(
                 "Değişiklik teknik bir gereksinim getirmemekte, "
                 "dokümanın kapsadığı birim veya tarafları "
                 "genişletmektedir."
+            ),
+            source="rule",
+        )
+
+    # Yalnızca yeni bir bölüm veya rol başlığı eklenmişse,
+    # bunu süreç/teknik değişiklik olarak yorumlamayız.
+    # Örnekler:
+    # "3.4 Bilgi Güvenliği Uzmanı"
+    # "6. UZAKTAN ÇALIŞMA"
+    heading_action_terms = (
+        "eder",
+        "verir",
+        "onaylar",
+        "tanımlar",
+        "oluşturur",
+        "kontrol",
+        "değerlendir",
+        "hazırla",
+        "doğrula",
+        "takip",
+        "rapor",
+        "kaydet",
+        "zorunlu",
+        "gerekir",
+        "gereklidir",
+    )
+
+    added_heading_only = (
+        not old_clean
+        and bool(new_clean)
+        and len(new_clean.split()) <= 6
+        and not new_clean.endswith(".")
+        and not any(
+            term in new_normalized
+            for term in heading_action_terms
+        )
+    )
+
+    if added_heading_only:
+        return ChangeClassification(
+            category=ChangeCategory.OTHER,
+            confidence=0.98,
+            reason=(
+                "Değişiklik yalnızca yeni bir bölüm veya rol "
+                "başlığı eklemektedir."
             ),
             source="rule",
         )
